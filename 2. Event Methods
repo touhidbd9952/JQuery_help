@@ -1,0 +1,66 @@
+/////Click Event//////////////////////
+
+$("p").click(function(){
+  $(this).hide();
+});
+
+/////Double Click Event//////////////
+
+$("p").dblclick(function(){
+  $(this).hide();
+});
+
+/////Mouse Enter Event//////////////
+
+$("#p1").mouseenter(function(){
+  alert("You entered p1!");
+});
+
+/////Mouse leave Event//////////////
+executed when the mouse pointer leaves
+
+$("#p1").mouseleave(function(){
+  alert("Bye! You now leave p1!");
+});
+
+/////Mouse down Event//////////////
+executed, when the left, middle or right mouse button is pressed down
+
+$("#p1").mousedown(function(){
+  alert("Mouse down over p1!");
+});
+
+/////Mouse up Event///////////////
+executed, when the left, middle or right mouse button is released
+
+$("#p1").mouseup(function(){
+  alert("Mouse up over p1!");
+});
+
+/////Mouse hover Event///////////
+executed when the mouse leaves the HTML element
+
+$("#p1").hover(function(){
+  alert("You entered p1!");
+},
+function(){
+  alert("Bye! You now leave p1!");
+});
+
+/////Focus Event
+executed when the form field gets focus
+
+$("input").focus(function(){
+  $(this).css("background-color", "#cccccc");
+});
+
+/////On Event////////////////////
+The on() method attaches one or more event handlers for the selected elements.
+
+$("p").on("click", function(){
+  $(this).hide();
+});
+
+$("p").on("click", function(){
+  $(this).hide();
+}); 
