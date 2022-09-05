@@ -1,3 +1,26 @@
+/////get html element by id/////////////////
+
+    var demo = document.getElementById("demo");
+
+//////get html element by class name/////////
+    
+    const collection = document.getElementsByClassName("example");
+
+//////get html element by name properties///////
+
+    <p>First Name: <input name="fname" type="text" value="Michael"></p>
+    <script>
+      let elements = document.getElementsByName("fname");
+      document.getElementById("demo").innerHTML = elements[0].tagName;
+    </script>
+
+//////get html element by tag name/////////////
+
+    const collection = document.getElementsByTagName("li");
+    
+    
+////////Function/////////////////////////////////////////////////////////////////////
+
 $("p").hide();
 $("p").show();
 $("p").hide(1000); // hide slowly
