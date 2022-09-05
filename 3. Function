@@ -1,0 +1,87 @@
+$("p").hide();
+$("p").show();
+$("p").hide(1000); // hide slowly
+$("p").toggle();  // one click hide, one click show
+
+$("#div1").fadeIn(); //show
+$("#div2").fadeIn("slow"); // show slowly
+$("#div3").fadeIn(3000); // show more slowly on time
+
+$("#div1").fadeOut(); //hide
+$("#div2").fadeOut("slow"); //hide showly
+$("#div3").fadeOut(3000); //hide more slowly on time
+
+$("#div1").fadeToggle();
+$("#div2").fadeToggle("slow");
+$("#div3").fadeToggle(3000);
+
+//decrease opacity
+$("#div1").fadeTo("slow", 0.15);
+$("#div2").fadeTo("slow", 0.4);
+$("#div3").fadeTo("slow", 0.7);
+
+$("#panel").slideDown("slow");  // show a slide top to down
+$("#panel").slideUp("slow"); //hide a slide down to up
+$("#panel").slideToggle("slow"); //one click show, other click hide slide
+
+/////Call back function//////////////////////////////
+
+$("button").click(function(){
+  $("p").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+}); 
+
+$("button").click(function(){
+  $("p").hide(1000);
+  alert("The paragraph is now hidden");
+}); 
+
+/////Add Elements//////////////////////////////////
+
+    append() - Inserts content at the end of the selected elements
+    prepend() - Inserts content at the beginning of the selected elements
+    after() - Inserts content after the selected elements
+    before() - Inserts content before the selected elements
+    
+  //Example   
+  $("p").append("Some appended text.");
+  $("p").prepend("Some prepended text.");
+
+  var txt1 = "<p>Text.</p>";               // Create element with HTML 
+  var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+  var txt3 = document.createElement("p");  // Create with DOM
+  txt3.innerHTML = "Text.";
+  $("body").append(txt1, txt2, txt3);
+  
+  //////Remove Elements/////////////////////////////
+  
+    remove() - Removes the selected element (and its child elements)
+    empty() - Removes the child elements from the selected element
+
+    $("#div1").remove();
+    $("#div1").empty();
+    $("p").remove(".test"); 
+    $("p").remove(".test, .demo");
+
+/////add Class//////////////////////////////////////
+  
+    $("div").addClass("important");
+    $("#div1").addClass("important blue");
+
+/////remove Class//////////////////////////////////
+    $("p").removeClass("blue");
+    $("h1, h2, p").removeClass("blue");
+
+/////toggle Class (add/remove)////////////////////
+    $("p").toggleClass("blue");
+
+/////Add CSS Property////////////////////////////
+    $("p").css("background-color", "yellow");
+    $("p").css({"background-color": "yellow", "font-size": "200%"});
+
+/////Content Load////////////////////////////////
+    $("#div1").load("demo_test.txt");
+
+
+
